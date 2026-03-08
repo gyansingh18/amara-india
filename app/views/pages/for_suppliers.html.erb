@@ -1,25 +1,25 @@
 <section class="hero">
   <div class="container">
-    <h1 class="hero__title">For Indian Suppliers</h1>
+    <h1 class="hero__title">For Indian sports & fitness manufacturers</h1>
     <p class="hero__subtitle">
-      Reach global buyers, get AI-powered market insights, and grow your export business with Amara India.
+      Reach global buyers—fitness brands, sports retailers, and ecommerce sellers—who are actively sourcing gym equipment, cricket gear, yoga products, and fitness accessories from India.
     </p>
-    <%= link_to "Get started", signup_path, class: "btn btn--primary btn--lg" %>
+    <%= link_to "Become a supplier", signup_path, class: "btn btn--primary btn--lg" %>
   </div>
 </section>
 
 <section class="section section--alt">
   <div class="container">
     <h2 class="section__title">Why join Amara India</h2>
-    <p class="section__subtitle">Built for Indian manufacturers and exporters.</p>
+    <p class="section__subtitle">We’re building the gateway for Indian sports and fitness manufacturing to reach the world.</p>
     <ul class="benefits-list">
-      <li><strong>Get global buyers</strong> — Your profile is visible to international importers searching for Indian suppliers.</li>
-      <li><strong>AI market insights</strong> — See demand trends and product opportunities to align production and exports.</li>
-      <li><strong>Export growth tools</strong> — Use intelligence on markets, tariffs, and demand to plan expansion.</li>
-      <li><strong>Global visibility</strong> — Verified badge and structured listing help you stand out in search and filters.</li>
+      <li><strong>Global buyer reach</strong> — Your profile is visible to international brands and retailers searching for gym equipment, sports gear, and fitness product manufacturers.</li>
+      <li><strong>Transparent profiles</strong> — Showcase factory location, products, MOQ, export countries, certifications, and capacity. Stand out with verification.</li>
+      <li><strong>Direct inquiries</strong> — Receive quote requests and connect with serious buyers. No commission on introductions—we’re building a platform, not a broker model.</li>
+      <li><strong>Future AI and expansion</strong> — As we add AI tools and new industries, verified sports and fitness suppliers will be at the center of the platform.</li>
     </ul>
     <p class="text-center" style="margin-top: 2rem;">
-      <%= link_to "Create free account", signup_path, class: "btn btn--primary btn--lg" %>
+      <%= link_to "Apply to list your company", signup_path, class: "btn btn--primary btn--lg" %>
     </p>
     <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9375rem; color: var(--color-text-muted);">
       Questions? <a href="mailto:team@amaraindia.com">team@amaraindia.com</a>
@@ -42,23 +42,22 @@
           <input type="email" id="email" name="email" required placeholder="you@company.com">
         </div>
         <div class="form-group">
-          <label for="industry">Primary industry</label>
+          <label for="industry">Primary category</label>
           <select id="industry" name="industry">
-            <option value="">Select industry</option>
-            <option value="agriculture">Agriculture</option>
-            <option value="textiles">Textiles</option>
-            <option value="electronics">Electronics</option>
-            <option value="machinery">Machinery</option>
-            <option value="handicrafts">Handicrafts</option>
-            <option value="industrial">Industrial Goods</option>
-            <option value="food">Food Products</option>
+            <option value="">Select category</option>
+            <option value="gym-equipment">Gym Equipment</option>
+            <option value="sports-equipment">Sports Equipment</option>
+            <option value="cricket">Cricket Gear</option>
+            <option value="training">Training Equipment</option>
+            <option value="fitness-accessories">Fitness Accessories</option>
+            <option value="yoga">Yoga Equipment</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">Tell us about your products (optional)</label>
-          <textarea id="message" name="message" rows="4" placeholder="Main products, export experience, certifications..."></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Main products, export experience, certifications, capacity..."></textarea>
         </div>
-        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Submit</button>
+        <button type="submit" class="btn btn--primary btn--lg btn--full">Submit</button>
       </form>
     </div>
   </div>

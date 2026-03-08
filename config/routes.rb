@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get "ai-tools/market-predictor", to: "pages#tool_market_predictor", as: :tool_market_predictor
   get "ai-tools/trade-intelligence", to: "pages#tool_trade_intelligence", as: :tool_trade_intelligence
   get "ai-tools/opportunity-scanner", to: "pages#tool_opportunity_scanner", as: :tool_opportunity_scanner
+
+  # Supplier profile (sample)
+  get "suppliers/:id", to: "pages#supplier", as: :supplier
 end

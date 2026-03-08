@@ -30,4 +30,6 @@ class PagesController < ApplicationController
   def tool_trade_intelligence; end
 
   def tool_opportunity_scanner; end
+
+  def supplier; end
 end

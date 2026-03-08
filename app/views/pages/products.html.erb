@@ -1,58 +1,60 @@
 <section class="section">
   <div class="container">
     <div class="page-hero-image-wrap">
-      <%= image_tag "marketplace-products.jpg", alt: "B2B marketplace – discover Indian suppliers and products", class: "page-hero-image" %>
+      <%= image_tag "marketplace-products.jpg", alt: "Sports and fitness manufacturers marketplace – gym equipment, cricket gear, yoga equipment from India", class: "page-hero-image" %>
     </div>
-    <h1 class="section__title mt-0">Products Marketplace</h1>
-    <p class="section__subtitle">Browse verified Indian manufacturers and exporters. Filter by industry, location, and more.</p>
+    <h1 class="section__title mt-0">Sports & Fitness Manufacturers</h1>
+    <p class="section__subtitle">Browse verified Indian manufacturers of gym equipment, sports gear, training equipment, and fitness products. Source directly with transparent MOQs and certifications.</p>
 
     <div class="filters">
-      <label for="filter-industry">Industry</label>
-      <select id="filter-industry" name="industry">
-        <option value="">All industries</option>
-        <option value="agriculture">Agriculture</option>
-        <option value="textiles">Textiles</option>
-        <option value="electronics">Electronics</option>
-        <option value="machinery">Machinery</option>
-        <option value="handicrafts">Handicrafts</option>
-        <option value="industrial">Industrial Goods</option>
-        <option value="food">Food Products</option>
+      <label for="filter-category">Category</label>
+      <select id="filter-category" name="category">
+        <option value="">All categories</option>
+        <option value="gym-equipment">Gym Equipment</option>
+        <option value="sports-equipment">Sports Equipment</option>
+        <option value="cricket">Cricket Gear</option>
+        <option value="training">Training Equipment</option>
+        <option value="fitness-accessories">Fitness Accessories</option>
+        <option value="yoga">Yoga Equipment</option>
       </select>
       <label for="filter-state">State</label>
       <select id="filter-state" name="state">
         <option value="">All states</option>
         <option value="gujarat">Gujarat</option>
         <option value="maharashtra">Maharashtra</option>
-        <option value="tamil-nadu">Tamil Nadu</option>
         <option value="punjab">Punjab</option>
-        <option value="rajasthan">Rajasthan</option>
+        <option value="delhi-ncr">Delhi NCR</option>
+        <option value="tamil-nadu">Tamil Nadu</option>
       </select>
       <label for="filter-cert">Certifications</label>
       <select id="filter-cert" name="certifications">
         <option value="">Any</option>
         <option value="iso">ISO</option>
-        <option value="fssai">FSSAI</option>
-        <option value="organic">Organic</option>
-      </select>
-      <label for="filter-volume">Export volume</label>
-      <select id="filter-volume" name="export_volume">
-        <option value="">Any</option>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="small">Small</option>
+        <option value="ce">CE</option>
+        <option value="gsa">GSA</option>
       </select>
     </div>
 
     <div class="products-grid">
-      <% 6.times do |i| %>
-        <article class="product-card">
-          <div class="product-card__image">Product image</div>
+      <% [
+        { name: "Premium Gym Equipment Co.", location: "Ludhiana, Punjab", products: "Treadmills, ellipticals, weight equipment", moq: "100 units", export: "US, UK, UAE, EU", certs: "ISO 9001", capacity: "10,000+ units/month" },
+        { name: "Sportex India", location: "Meerut, Uttar Pradesh", products: "Cricket bats, balls, protective gear", moq: "500 units", export: "UK, Australia, South Africa", certs: "ISO, BSCI", capacity: "5,000+ units/month" },
+        { name: "YogaPro Manufacturing", location: "Coimbatore, Tamil Nadu", products: "Yoga mats, blocks, straps, accessories", moq: "200 units", export: "US, EU, Canada", certs: "ISO, OEKO-TEX", capacity: "8,000+ units/month" },
+        { name: "FitForge Industries", location: "Ahmedabad, Gujarat", products: "Dumbbells, kettlebells, resistance bands", moq: "300 units", export: "US, EU, Middle East", certs: "ISO 9001", capacity: "15,000+ units/month" },
+        { name: "TrainRight Gear", location: "Delhi NCR", products: "Training cones, agility ladders, fitness accessories", moq: "250 units", export: "US, UK, EU", certs: "ISO", capacity: "6,000+ units/month" },
+        { name: "FlexFit Exports", location: "Jalandhar, Punjab", products: "Gym accessories, gloves, belts, straps", moq: "200 units", export: "US, EU, Australia", certs: "ISO 9001, CE", capacity: "12,000+ units/month" },
+      ].each_with_index do |s, i| %>
+        <article class="product-card supplier-card">
+          <div class="product-card__image">Supplier</div>
           <div class="product-card__body">
-            <h3 class="product-card__title">Sample product <%= i + 1 %></h3>
-            <p class="product-card__meta">Supplier: Verified Exporter Co.</p>
-            <p class="product-card__meta">MOQ: 500 units</p>
-            <p class="product-card__meta">Markets: US, EU, UAE</p>
-            <p class="product-card__meta">Location: Gujarat, India</p>
+            <h3 class="product-card__title"><%= s[:name] %></h3>
+            <p class="product-card__meta"><strong>Location:</strong> <%= s[:location] %></p>
+            <p class="product-card__meta"><strong>Products:</strong> <%= s[:products] %></p>
+            <p class="product-card__meta"><strong>MOQ:</strong> <%= s[:moq] %></p>
+            <p class="product-card__meta"><strong>Export:</strong> <%= s[:export] %></p>
+            <p class="product-card__meta"><strong>Certifications:</strong> <%= s[:certs] %></p>
+            <p class="product-card__meta"><strong>Capacity:</strong> <%= s[:capacity] %></p>
+            <%= link_to "View profile & request quote", supplier_path(i + 1), class: "btn btn--primary btn--sm", style: "margin-top: 0.75rem; width: 100%;" %>
           </div>
         </article>
       <% end %>

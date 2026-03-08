@@ -2,14 +2,14 @@
   <div class="hero__bg" style="background-image: url('<%= asset_path('hero-global-trade-india.jpg') %>');" aria-hidden="true"></div>
   <div class="hero__overlay"></div>
   <div class="container hero__content">
-    <p class="hero__badge">AI-powered global trade platform</p>
-    <h1 class="hero__title">AI Powered Global Sourcing from India</h1>
+    <p class="hero__badge">The global sourcing gateway for Indian sports & fitness manufacturing</p>
+    <h1 class="hero__title">AI-Powered Global Sourcing for Indian Sports & Fitness Manufacturers</h1>
     <p class="hero__subtitle">
-      Discover verified Indian manufacturers, analyze global demand, and source products faster with AI.
+      Connect with verified Indian manufacturers of gym equipment, sports gear, and fitness products. Source directly, reduce costs, and scale your brand globally.
     </p>
     <div class="hero__actions">
-      <%= link_to "Find Suppliers", products_path, class: "btn btn--primary btn--lg" %>
-      <%= link_to "Join as Supplier", for_suppliers_path, class: "btn btn--outline btn--lg" %>
+      <%= link_to "Find Manufacturers", products_path, class: "btn btn--primary btn--lg" %>
+      <%= link_to "Become a Supplier", for_suppliers_path, class: "btn btn--outline btn--lg" %>
     </div>
   </div>
 </section>
@@ -19,19 +19,19 @@
     <div class="search-section__grid">
       <div class="search-section__content">
         <h2 class="section__title">Search the platform</h2>
-        <p class="section__subtitle">Find products, suppliers, or explore by industry.</p>
+        <p class="section__subtitle">Find sports and fitness manufacturers by product or category.</p>
         <div class="search-box">
-          <input type="search" class="search-box__input" placeholder="Search products, suppliers, or industries" aria-label="Search">
+          <input type="search" class="search-box__input" placeholder="Search gym equipment, sports gear, yoga products, suppliers..." aria-label="Search">
         </div>
         <div class="search-suggestions">
-          <%= link_to "spices exporters", products_path(q: "spices"), class: "search-suggestions__tag" %>
-          <%= link_to "textile manufacturers", products_path(q: "textiles"), class: "search-suggestions__tag" %>
-          <%= link_to "agriculture suppliers", products_path(q: "agriculture"), class: "search-suggestions__tag" %>
-          <%= link_to "electronics manufacturers", products_path(q: "electronics"), class: "search-suggestions__tag" %>
+          <%= link_to "gym equipment", products_path(category: "gym-equipment"), class: "search-suggestions__tag" %>
+          <%= link_to "cricket gear", products_path(category: "cricket"), class: "search-suggestions__tag" %>
+          <%= link_to "yoga equipment", products_path(category: "yoga"), class: "search-suggestions__tag" %>
+          <%= link_to "fitness accessories", products_path(category: "fitness-accessories"), class: "search-suggestions__tag" %>
         </div>
       </div>
       <div class="search-section__visual">
-        <%= image_tag "dashboard-ai-tools.jpg", alt: "AI-powered supplier discovery dashboard", class: "section-image section-image--rounded" %>
+        <%= image_tag "dashboard-ai-tools.jpg", alt: "AI-powered supplier discovery for sports and fitness", class: "section-image section-image--rounded" %>
       </div>
     </div>
   </div>
@@ -39,35 +39,27 @@
 
 <section class="section section--alt">
   <div class="container">
-    <div class="section__header-with-image">
-      <div>
-        <h2 class="section__title">Platform features</h2>
-        <p class="section__subtitle">Everything you need to source from India with confidence.</p>
+    <h2 class="section__title">Why source sports equipment from India</h2>
+    <p class="section__subtitle">India is one of the world’s leading producers of sports and fitness equipment—and the infrastructure for global export is stronger than ever.</p>
+    <div class="why-india-grid">
+      <div class="why-india__producers">
+        <h3 class="why-india__heading">India leads in</h3>
+        <ul class="why-india-list">
+          <li>Cricket equipment</li>
+          <li>Fitness gear</li>
+          <li>Gym accessories</li>
+          <li>Yoga equipment</li>
+          <li>Sports apparel</li>
+        </ul>
       </div>
-      <div class="section__trust-visual">
-        <%= image_tag "trust-verified-suppliers.jpg", alt: "Verified suppliers and trust", class: "section-image section-image--rounded" %>
-      </div>
-    </div>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-card__icon" aria-hidden="true">◇</div>
-        <h3 class="feature-card__title">AI Supplier Discovery</h3>
-        <p class="feature-card__text">Find verified Indian manufacturers instantly.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__icon" aria-hidden="true">▣</div>
-        <h3 class="feature-card__title">Export Market Intelligence</h3>
-        <p class="feature-card__text">Analyze which products are in demand globally.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__icon" aria-hidden="true">◈</div>
-        <h3 class="feature-card__title">Global Buyer Network</h3>
-        <p class="feature-card__text">Connect with international importers.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__icon" aria-hidden="true">◆</div>
-        <h3 class="feature-card__title">Verified Supplier Database</h3>
-        <p class="feature-card__text">Access trusted exporters across India.</p>
+      <div class="why-india__benefits">
+        <h3 class="why-india__heading">Benefits for global buyers</h3>
+        <ul class="why-india-list why-india-list--check">
+          <li>Lower manufacturing costs</li>
+          <li>Skilled production</li>
+          <li>Private label opportunities</li>
+          <li>Growing export infrastructure</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -75,23 +67,60 @@
 
 <section class="section">
   <div class="container">
+    <h2 class="section__title">Who this platform is for</h2>
+    <p class="section__subtitle">Whether you’re a fitness brand, retailer, or ecommerce seller, Amara India connects you directly with verified Indian manufacturers.</p>
+    <div class="buyer-profiles">
+      <div class="buyer-profile-card">
+        <div class="buyer-profile-card__icon" aria-hidden="true">◉</div>
+        <h3 class="buyer-profile-card__title">Fitness brands</h3>
+        <p class="buyer-profile-card__text">Companies building private-label gym equipment, fitness accessories, or training gear. Source at scale with transparent MOQs and certifications.</p>
+      </div>
+      <div class="buyer-profile-card">
+        <div class="buyer-profile-card__icon" aria-hidden="true">▣</div>
+        <h3 class="buyer-profile-card__title">Sports retailers</h3>
+        <p class="buyer-profile-card__text">Retail stores sourcing cricket equipment, training gear, or sports accessories. Connect with export-ready factories and reduce lead times.</p>
+      </div>
+      <div class="buyer-profile-card">
+        <div class="buyer-profile-card__icon" aria-hidden="true">◇</div>
+        <h3 class="buyer-profile-card__title">Ecommerce sellers</h3>
+        <p class="buyer-profile-card__text">Amazon, Shopify, and ecommerce brands sourcing sports and fitness products. Find manufacturers who support private label and flexible MOQs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Why buyers choose Amara India</h2>
+    <p class="section__subtitle">We’re building the sourcing platform we wished existed—verified, transparent, and built for scale.</p>
+    <ul class="why-choose-list">
+      <li><strong>Verified Indian manufacturers</strong> — Every supplier is vetted for legitimacy and export capability.</li>
+      <li><strong>Transparent supplier profiles</strong> — Factory location, MOQ, export countries, certifications, and capacity at a glance.</li>
+      <li><strong>Direct factory access</strong> — No middlemen. Negotiate and order directly with manufacturers.</li>
+      <li><strong>Export-ready suppliers</strong> — Factories that already ship internationally and understand documentation and logistics.</li>
+      <li><strong>Future AI-powered sourcing tools</strong> — Supplier match, price benchmarking, and demand analytics coming to the platform.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="industries-intro">
       <div>
-        <h2 class="section__title">Industries</h2>
-        <p class="section__subtitle">Browse by category and connect with the right suppliers.</p>
+        <h2 class="section__title">Categories</h2>
+        <p class="section__subtitle">Browse by category and connect with the right sports and fitness manufacturers.</p>
       </div>
       <div class="industries-visual">
-        <%= image_tag "industries-india-export.jpg", alt: "Indian export industries – agriculture, textiles, electronics, and more", class: "section-image section-image--rounded" %>
+        <%= image_tag "industries-india-export.jpg", alt: "Indian sports and fitness manufacturing", class: "section-image section-image--rounded" %>
       </div>
     </div>
     <div class="industry-grid">
-      <%= link_to products_path(industry: "agriculture"), class: "industry-card" do %>Agriculture<% end %>
-      <%= link_to products_path(industry: "textiles"), class: "industry-card" do %>Textiles<% end %>
-      <%= link_to products_path(industry: "electronics"), class: "industry-card" do %>Electronics<% end %>
-      <%= link_to products_path(industry: "machinery"), class: "industry-card" do %>Machinery<% end %>
-      <%= link_to products_path(industry: "handicrafts"), class: "industry-card" do %>Handicrafts<% end %>
-      <%= link_to products_path(industry: "industrial"), class: "industry-card" do %>Industrial Goods<% end %>
-      <%= link_to products_path(industry: "food"), class: "industry-card" do %>Food Products<% end %>
+      <%= link_to products_path(category: "gym-equipment"), class: "industry-card" do %>Gym Equipment<% end %>
+      <%= link_to products_path(category: "sports-equipment"), class: "industry-card" do %>Sports Equipment<% end %>
+      <%= link_to products_path(category: "cricket"), class: "industry-card" do %>Cricket Gear<% end %>
+      <%= link_to products_path(category: "training"), class: "industry-card" do %>Training Equipment<% end %>
+      <%= link_to products_path(category: "fitness-accessories"), class: "industry-card" do %>Fitness Accessories<% end %>
+      <%= link_to products_path(category: "yoga"), class: "industry-card" do %>Yoga Equipment<% end %>
     </div>
   </div>
 </section>
@@ -100,34 +129,52 @@
   <div class="container">
     <div class="section__header-with-image section__header-with-image--reverse">
       <div>
-        <h2 class="section__title">Coming next on the platform</h2>
-        <p class="section__subtitle">We’re building more tools for verified, data-driven global trade.</p>
+        <h2 class="section__title">Future AI tools</h2>
+        <p class="section__subtitle">We’re building AI-powered tools to help global buyers discover the best sourcing opportunities. Coming soon to the platform.</p>
       </div>
       <div class="section__trust-visual">
-        <%= image_tag "coming-next-platform.jpg", alt: "Upcoming platform features – verification, analytics, documentation, messaging", class: "section-image section-image--rounded" %>
+        <%= image_tag "coming-next-platform.jpg", alt: "AI sourcing tools coming soon", class: "section-image section-image--rounded" %>
       </div>
     </div>
     <div class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-card__icon" aria-hidden="true">✓</div>
-        <h3 class="feature-card__title">Supplier verification system</h3>
-        <p class="feature-card__text">Structured verification and trust signals for every supplier.</p>
+      <div class="feature-card feature-card--coming">
+        <div class="feature-card__icon" aria-hidden="true">◇</div>
+        <h3 class="feature-card__title">AI Supplier Match</h3>
+        <p class="feature-card__text">Match your product and volume requirements with the best-fit Indian manufacturers. Coming soon.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card feature-card--coming">
         <div class="feature-card__icon" aria-hidden="true">▣</div>
-        <h3 class="feature-card__title">Trade analytics dashboard</h3>
-        <p class="feature-card__text">Custom dashboards for demand, shipments, and market share.</p>
+        <h3 class="feature-card__title">AI Price Benchmarking</h3>
+        <p class="feature-card__text">Compare quotes and market rates for gym and sports equipment. Coming soon.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card feature-card--coming">
         <div class="feature-card__icon" aria-hidden="true">◈</div>
-        <h3 class="feature-card__title">Export documentation tools</h3>
-        <p class="feature-card__text">Generate and manage invoices, packing lists, and certificates.</p>
+        <h3 class="feature-card__title">Export Market Demand Analyzer</h3>
+        <p class="feature-card__text">See which sports and fitness products are in demand by region. Coming soon.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card feature-card--coming">
         <div class="feature-card__icon" aria-hidden="true">◆</div>
-        <h3 class="feature-card__title">Global buyer messaging</h3>
-        <p class="feature-card__text">Secure messaging between buyers and suppliers on the platform.</p>
+        <h3 class="feature-card__title">Product Opportunity Finder</h3>
+        <p class="feature-card__text">Discover high-opportunity products for your market. Coming soon.</p>
       </div>
     </div>
+    <p class="text-center" style="margin-top: 1.5rem;">
+      <%= link_to "Learn more about our roadmap", ai_tools_path, class: "btn btn--secondary" %>
+    </p>
+  </div>
+</section>
+
+<section class="section section-vision">
+  <div class="container container--narrow">
+    <h2 class="section__title">Platform vision</h2>
+    <p class="vision-text">
+      Amara India is building the next-generation global sourcing platform for Indian manufacturers. Starting with <strong>sports and fitness equipment</strong>, our vision is to expand into multiple industries—from handicrafts and sustainable products to wellness and textiles—and power global trade through data and artificial intelligence.
+    </p>
+    <p class="vision-text">
+      We’re not a directory. We’re a technology company building the infrastructure for transparent, efficient, and scalable sourcing from India.
+    </p>
+    <p class="text-center" style="margin-top: 2rem;">
+      <%= link_to "About Amara India", about_path, class: "btn btn--primary" %>
+    </p>
   </div>
 </section>
