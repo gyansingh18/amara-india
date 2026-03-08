@@ -1,0 +1,37 @@
+<section class="section">
+  <div class="container container--narrow">
+    <h1 class="section__title mt-0">Sign up</h1>
+    <p class="section__subtitle">Create a free account to discover suppliers or list your business.</p>
+
+    <div class="onboarding-form">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label for="role">I am a</label>
+          <select id="role" name="role">
+            <option value="buyer">International buyer / Importer</option>
+            <option value="supplier">Indian supplier / Exporter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Min. 8 characters">
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Create account</button>
+      </form>
+      <p class="text-center" style="margin-top: 1rem; font-size: 0.9375rem;">
+        Already have an account? <%= link_to "Log in", login_path %>
+      </p>
+      <p class="text-center" style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--color-text-muted);">
+        Questions? <a href="mailto:team@amaraindia.com">team@amaraindia.com</a>
+      </p>
+    </div>
+  </div>
+</section>

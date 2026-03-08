@@ -1,0 +1,133 @@
+<section class="hero hero--with-bg">
+  <div class="hero__bg" style="background-image: url('<%= asset_path('hero-global-trade-india.jpg') %>');" aria-hidden="true"></div>
+  <div class="hero__overlay"></div>
+  <div class="container hero__content">
+    <p class="hero__badge">AI-powered global trade platform</p>
+    <h1 class="hero__title">AI Powered Global Sourcing from India</h1>
+    <p class="hero__subtitle">
+      Discover verified Indian manufacturers, analyze global demand, and source products faster with AI.
+    </p>
+    <div class="hero__actions">
+      <%= link_to "Find Suppliers", products_path, class: "btn btn--primary btn--lg" %>
+      <%= link_to "Join as Supplier", for_suppliers_path, class: "btn btn--outline btn--lg" %>
+    </div>
+  </div>
+</section>
+
+<section class="search-section section">
+  <div class="container">
+    <div class="search-section__grid">
+      <div class="search-section__content">
+        <h2 class="section__title">Search the platform</h2>
+        <p class="section__subtitle">Find products, suppliers, or explore by industry.</p>
+        <div class="search-box">
+          <input type="search" class="search-box__input" placeholder="Search products, suppliers, or industries" aria-label="Search">
+        </div>
+        <div class="search-suggestions">
+          <%= link_to "spices exporters", products_path(q: "spices"), class: "search-suggestions__tag" %>
+          <%= link_to "textile manufacturers", products_path(q: "textiles"), class: "search-suggestions__tag" %>
+          <%= link_to "agriculture suppliers", products_path(q: "agriculture"), class: "search-suggestions__tag" %>
+          <%= link_to "electronics manufacturers", products_path(q: "electronics"), class: "search-suggestions__tag" %>
+        </div>
+      </div>
+      <div class="search-section__visual">
+        <%= image_tag "dashboard-ai-tools.jpg", alt: "AI-powered supplier discovery dashboard", class: "section-image section-image--rounded" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header-with-image">
+      <div>
+        <h2 class="section__title">Platform features</h2>
+        <p class="section__subtitle">Everything you need to source from India with confidence.</p>
+      </div>
+      <div class="section__trust-visual">
+        <%= image_tag "trust-verified-suppliers.jpg", alt: "Verified suppliers and trust", class: "section-image section-image--rounded" %>
+      </div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">◇</div>
+        <h3 class="feature-card__title">AI Supplier Discovery</h3>
+        <p class="feature-card__text">Find verified Indian manufacturers instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">▣</div>
+        <h3 class="feature-card__title">Export Market Intelligence</h3>
+        <p class="feature-card__text">Analyze which products are in demand globally.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">◈</div>
+        <h3 class="feature-card__title">Global Buyer Network</h3>
+        <p class="feature-card__text">Connect with international importers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">◆</div>
+        <h3 class="feature-card__title">Verified Supplier Database</h3>
+        <p class="feature-card__text">Access trusted exporters across India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="industries-intro">
+      <div>
+        <h2 class="section__title">Industries</h2>
+        <p class="section__subtitle">Browse by category and connect with the right suppliers.</p>
+      </div>
+      <div class="industries-visual">
+        <%= image_tag "industries-india-export.jpg", alt: "Indian export industries – agriculture, textiles, electronics, and more", class: "section-image section-image--rounded" %>
+      </div>
+    </div>
+    <div class="industry-grid">
+      <%= link_to products_path(industry: "agriculture"), class: "industry-card" do %>Agriculture<% end %>
+      <%= link_to products_path(industry: "textiles"), class: "industry-card" do %>Textiles<% end %>
+      <%= link_to products_path(industry: "electronics"), class: "industry-card" do %>Electronics<% end %>
+      <%= link_to products_path(industry: "machinery"), class: "industry-card" do %>Machinery<% end %>
+      <%= link_to products_path(industry: "handicrafts"), class: "industry-card" do %>Handicrafts<% end %>
+      <%= link_to products_path(industry: "industrial"), class: "industry-card" do %>Industrial Goods<% end %>
+      <%= link_to products_path(industry: "food"), class: "industry-card" do %>Food Products<% end %>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header-with-image section__header-with-image--reverse">
+      <div>
+        <h2 class="section__title">Coming next on the platform</h2>
+        <p class="section__subtitle">We’re building more tools for verified, data-driven global trade.</p>
+      </div>
+      <div class="section__trust-visual">
+        <%= image_tag "coming-next-platform.jpg", alt: "Upcoming platform features – verification, analytics, documentation, messaging", class: "section-image section-image--rounded" %>
+      </div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">✓</div>
+        <h3 class="feature-card__title">Supplier verification system</h3>
+        <p class="feature-card__text">Structured verification and trust signals for every supplier.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">▣</div>
+        <h3 class="feature-card__title">Trade analytics dashboard</h3>
+        <p class="feature-card__text">Custom dashboards for demand, shipments, and market share.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">◈</div>
+        <h3 class="feature-card__title">Export documentation tools</h3>
+        <p class="feature-card__text">Generate and manage invoices, packing lists, and certificates.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">◆</div>
+        <h3 class="feature-card__title">Global buyer messaging</h3>
+        <p class="feature-card__text">Secure messaging between buyers and suppliers on the platform.</p>
+      </div>
+    </div>
+  </div>
+</section>

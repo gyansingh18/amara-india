@@ -1,0 +1,26 @@
+<section class="section">
+  <div class="container container--narrow">
+    <h1 class="section__title mt-0">Log in</h1>
+    <p class="section__subtitle">Sign in to your Amara India account.</p>
+
+    <div class="onboarding-form">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Log in</button>
+      </form>
+      <p class="text-center" style="margin-top: 1rem; font-size: 0.9375rem;">
+        Don’t have an account? <%= link_to "Sign up", signup_path %>
+      </p>
+      <p class="text-center" style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--color-text-muted);">
+        Need help? <a href="mailto:team@amaraindia.com">team@amaraindia.com</a>
+      </p>
+    </div>
+  </div>
+</section>

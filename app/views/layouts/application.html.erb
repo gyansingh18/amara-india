@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amara India – AI-Powered Global Sourcing from India</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Discover verified Indian manufacturers, analyze global demand, and source products faster with AI. Import from India with Amara India.">
+    <meta name="keywords" content="import from India, Indian manufacturers, global sourcing India, AI trade intelligence, export from India platform">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <%= link_to root_path, class: "logo" do %>
+              Amara <span>India</span>
+            <% end %>
+            <nav class="nav">
+              <%= link_to "Home", root_path, class: "nav__link" %>
+              <%= link_to "Products", products_path, class: "nav__link" %>
+              <%= link_to "AI Tools", ai_tools_path, class: "nav__link" %>
+              <%= link_to "For Buyers", for_buyers_path, class: "nav__link" %>
+              <%= link_to "For Suppliers", for_suppliers_path, class: "nav__link" %>
+              <%= link_to "About", about_path, class: "nav__link" %>
+              <%= link_to "Blog", blog_path, class: "nav__link" %>
+              <%= link_to "Contact", contact_path, class: "nav__link" %>
+            </nav>
+            <div class="header__actions">
+              <%= link_to "Log in", login_path, class: "btn btn--secondary" %>
+              <%= link_to "Sign up", signup_path, class: "btn btn--primary" %>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <%= yield %>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__col">
+              <h4>Platform</h4>
+              <ul>
+                <li><%= link_to "Products Marketplace", products_path %></li>
+                <li><%= link_to "AI Tools", ai_tools_path %></li>
+                <li><%= link_to "For Buyers", for_buyers_path %></li>
+                <li><%= link_to "For Suppliers", for_suppliers_path %></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Company</h4>
+              <ul>
+                <li><%= link_to "About", about_path %></li>
+                <li><%= link_to "Blog & Insights", blog_path %></li>
+                <li><%= link_to "Contact", contact_path %></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:team@amaraindia.com">team@amaraindia.com</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Account</h4>
+              <ul>
+                <li><%= link_to "Sign up", signup_path %></li>
+                <li><%= link_to "Log in", login_path %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            © <%= Time.current.year %> Amara India. AI-powered global trade from India. <a href="mailto:team@amaraindia.com" style="color: inherit; margin-left: 0.5rem;">team@amaraindia.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <%= javascript_importmap_tags %>
+  </body>
+</html>

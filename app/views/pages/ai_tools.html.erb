@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="container">
+    <div class="page-hero-image-wrap">
+      <%= image_tag "dashboard-ai-tools.jpg", alt: "AI-powered trade intelligence dashboard", class: "page-hero-image" %>
+    </div>
+    <h1 class="section__title mt-0">AI Tools</h1>
+    <p class="section__subtitle">Intelligence and automation for global trade. Explore tools for supplier discovery, demand analysis, and market prediction.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3 class="tool-card__title">AI Supplier Finder</h3>
+        <p class="tool-card__desc">Match your requirements with verified Indian manufacturers using AI. Filter by product, capacity, certifications, and export history.</p>
+        <%= link_to "Learn more", tool_supplier_finder_path, class: "btn btn--primary" %>
+      </div>
+      <div class="tool-card">
+        <h3 class="tool-card__title">AI Demand Analyzer</h3>
+        <p class="tool-card__desc">See which products are in demand globally. Use trade data and trends to decide what to source or export.</p>
+        <%= link_to "Learn more", tool_demand_analyzer_path, class: "btn btn--primary" %>
+      </div>
+      <div class="tool-card">
+        <h3 class="tool-card__title">Export Market Predictor</h3>
+        <p class="tool-card__desc">Forecast demand and market shifts by region and product category. Plan your sourcing and export strategy.</p>
+        <%= link_to "Learn more", tool_market_predictor_path, class: "btn btn--primary" %>
+      </div>
+      <div class="tool-card">
+        <h3 class="tool-card__title">Trade Data Intelligence</h3>
+        <p class="tool-card__desc">Access clean, structured trade data: shipments, tariffs, and bilateral flows. Built for analysts and platforms.</p>
+        <%= link_to "Learn more", tool_trade_intelligence_path, class: "btn btn--primary" %>
+      </div>
+      <div class="tool-card">
+        <h3 class="tool-card__title">Product Opportunity Scanner</h3>
+        <p class="tool-card__desc">Discover high-opportunity products for your region or category. Identify gaps and emerging demand.</p>
+        <%= link_to "Learn more", tool_opportunity_scanner_path, class: "btn btn--primary" %>
+      </div>
+    </div>
+
+    <p class="text-center" style="margin-top: 2rem;">
+      <%= link_to "Back to platform", root_path, class: "btn btn--secondary" %>
+    </p>
+  </div>
+</section>

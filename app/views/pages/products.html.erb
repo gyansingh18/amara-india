@@ -1,0 +1,61 @@
+<section class="section">
+  <div class="container">
+    <div class="page-hero-image-wrap">
+      <%= image_tag "marketplace-products.jpg", alt: "B2B marketplace – discover Indian suppliers and products", class: "page-hero-image" %>
+    </div>
+    <h1 class="section__title mt-0">Products Marketplace</h1>
+    <p class="section__subtitle">Browse verified Indian manufacturers and exporters. Filter by industry, location, and more.</p>
+
+    <div class="filters">
+      <label for="filter-industry">Industry</label>
+      <select id="filter-industry" name="industry">
+        <option value="">All industries</option>
+        <option value="agriculture">Agriculture</option>
+        <option value="textiles">Textiles</option>
+        <option value="electronics">Electronics</option>
+        <option value="machinery">Machinery</option>
+        <option value="handicrafts">Handicrafts</option>
+        <option value="industrial">Industrial Goods</option>
+        <option value="food">Food Products</option>
+      </select>
+      <label for="filter-state">State</label>
+      <select id="filter-state" name="state">
+        <option value="">All states</option>
+        <option value="gujarat">Gujarat</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="tamil-nadu">Tamil Nadu</option>
+        <option value="punjab">Punjab</option>
+        <option value="rajasthan">Rajasthan</option>
+      </select>
+      <label for="filter-cert">Certifications</label>
+      <select id="filter-cert" name="certifications">
+        <option value="">Any</option>
+        <option value="iso">ISO</option>
+        <option value="fssai">FSSAI</option>
+        <option value="organic">Organic</option>
+      </select>
+      <label for="filter-volume">Export volume</label>
+      <select id="filter-volume" name="export_volume">
+        <option value="">Any</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="small">Small</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+      <% 6.times do |i| %>
+        <article class="product-card">
+          <div class="product-card__image">Product image</div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Sample product <%= i + 1 %></h3>
+            <p class="product-card__meta">Supplier: Verified Exporter Co.</p>
+            <p class="product-card__meta">MOQ: 500 units</p>
+            <p class="product-card__meta">Markets: US, EU, UAE</p>
+            <p class="product-card__meta">Location: Gujarat, India</p>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>

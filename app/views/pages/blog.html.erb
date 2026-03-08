@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="container">
+    <h1 class="section__title mt-0">Blog & Insights</h1>
+    <p class="section__subtitle">Export guides, trade intelligence, and insights on AI in global trade and sourcing from India.</p>
+
+    <div class="blog-categories">
+      <%= link_to "Export guides", blog_path(category: "export-guides") %>
+      <%= link_to "Trade intelligence", blog_path(category: "trade-intelligence") %>
+      <%= link_to "AI in global trade", blog_path(category: "ai-trade") %>
+      <%= link_to "India manufacturing", blog_path(category: "india-manufacturing") %>
+      <%= link_to "Global sourcing", blog_path(category: "sourcing") %>
+    </div>
+
+    <ul class="article-list">
+      <li><%= link_to "How to Import from India", "#" %> — A step-by-step guide for first-time importers.</li>
+      <li><%= link_to "Top Products Exported from India", "#" %> — Categories and trends.</li>
+      <li><%= link_to "AI in Global Supply Chains", "#" %> — How AI is changing sourcing and logistics.</li>
+      <li><%= link_to "Verifying Indian Suppliers", "#" %> — What to check before you order.</li>
+      <li><%= link_to "Understanding MOQ and Lead Times", "#" %> — Plan your orders with confidence.</li>
+    </ul>
+  </div>
+</section>
